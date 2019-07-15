@@ -37,4 +37,26 @@ public interface Library {
      * @see Member#payBook(int)
      */
     void returnBook(Book book, Member member);
+    
+    /**
+     * A member is borrowing a book
+     * 
+     * @param book the {@link Book} that is borrowed by "membre"
+     * @param member the {@link Member} who is borrowing the book
+     */
+    void addBorrowedBooksByMember(Book book, Member member);
+    
+    /**
+     * A member is returning a book borrowed
+     * 
+     * @param book the {@link Book} that is removed from list 
+     */
+    void substractBorrowedBooksByMember(Book book); 
+    
+    /**
+     * 
+     * @param member the {@link Member} being checked for borrowed books
+     * @return 
+     */
+    boolean HasLateBooks(Member member);
 }
